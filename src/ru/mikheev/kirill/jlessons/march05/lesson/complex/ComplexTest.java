@@ -1,8 +1,1 @@
-package ru.mikheev.kirill.jlessons.march05.lesson.complex;
-
-public class ComplexTest {
-
-    public static void main(String[] args) {
-
-    }
-}
+package ru.mikheev.kirill.jlessons.march05.lesson.complex;import java.util.Scanner;public class ComplexTest {    public static void main(String[] args) {        Scanner in = new Scanner(System.in);        int n = in.nextInt();        for(int i = 0; i < n; i++) {            System.out.println(i);        }        Number first = new ComplexNumber(1, 1);        Number second = new ComplexNumber(2, 2);        ComplexNumber result = ( (ComplexNumber)first).add((ComplexNumber) second);        validateComplexNumber(result, 3, 3);        System.out.println("SUCCESSFUL RESULT!!!");    }    static void validateComplexNumber(ComplexNumber complexNumber, double re, double im) {        assert complexNumber.getRe() == re : "bad real part";        assert complexNumber.getIm() == im : "bad imaginary part";    }}
