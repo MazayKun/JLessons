@@ -21,7 +21,8 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    public double getAngleCount() {
-        return 4;
+    public double getAngleCount() throws MyCustomShapeException {
+        throw new MyCustomShapeException();
+        //return 4;
     }
 }

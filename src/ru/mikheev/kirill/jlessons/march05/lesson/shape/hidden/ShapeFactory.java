@@ -17,6 +17,10 @@ public class ShapeFactory {
         );
     }
 
+    public static void someMethodWithCheckedException() throws Exception {
+        throw new NullPointerException("Some exception");
+    }
+
 //    public static Shape createShape(ShapeType shapeType, double[] params) {
 //        switch (shapeType) {
 //            case RECTANGLE: {
