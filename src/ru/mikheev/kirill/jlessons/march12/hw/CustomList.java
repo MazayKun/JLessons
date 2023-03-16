@@ -4,6 +4,8 @@ public interface CustomList {
 
     void add(String elem);
 
+    void add(int index, String elem);
+
     String get(int index);
 
     int size();
