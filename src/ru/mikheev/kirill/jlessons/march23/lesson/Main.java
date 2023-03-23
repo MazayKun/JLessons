@@ -1,11 +1,21 @@
 package ru.mikheev.kirill.jlessons.march23.lesson;
 
 import java.io.*;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
+        long startTime = System.currentTimeMillis();
 
-        File testFile = new File("test.out");
+        File testFile = new File("C:/Users/kir99/Desktop/JLessons/test.out");
+
+
+
+        var rnd = new Random(System.currentTimeMillis());
+
+
+
+        System.out.println(testFile.getAbsolutePath());
 
         initSimpleFile(testFile);
 
@@ -14,6 +24,8 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        System.out.println("Time to execute - " + (System.currentTimeMillis() - startTime));
 
         //printlnWordsFromFile(testFile);
 
