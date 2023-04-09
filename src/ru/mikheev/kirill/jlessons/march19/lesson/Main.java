@@ -1,5 +1,8 @@
 package ru.mikheev.kirill.jlessons.march19.lesson;
 
+import java.util.Arrays;
+import java.util.stream.IntStream;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -39,6 +42,25 @@ public class Main {
 //        for(var mapEntity : map.entrySet()) {
 //            System.out.println(mapEntity.getKey() + " = " + mapEntity.getValue());
 //        }
+
+        System.out.println(
+                Arrays.toString(
+                        IntStream.rangeClosed(-10, 10)
+                                .collect(
+                                        () -> new int[]{0, 0},
+                                        (result, number) -> {
+                                            if (number < 0) result[0]++;
+                                            else result[1]++;
+                                        },
+                                        (result1, result2) -> {
+                                            result1[0] += result2[0];
+                                            result1[1] += result2[1];
+                                        }
+                                        )
+                )
+        );
+
+
 
 
     }
