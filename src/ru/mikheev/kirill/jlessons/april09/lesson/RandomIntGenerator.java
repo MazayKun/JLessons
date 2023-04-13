@@ -7,7 +7,7 @@ import java.util.Random;
 public class RandomIntGenerator implements Iterator<Integer>, AutoCloseable {
 
     private boolean isClosed = false;
-    private final Random random = new Random(100L);
+    private final Random random = new Random();
     private final int start, end;
 
     public RandomIntGenerator(int start, int end) {
