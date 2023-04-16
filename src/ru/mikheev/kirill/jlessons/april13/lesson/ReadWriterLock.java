@@ -38,7 +38,7 @@ public class ReadWriterLock {
 
     public void releaseWrite() {
         writeCounter.decrementAndGet();
-        readCondition.signal();
         writeCondition.signal();
+        readCondition.signal();
     }
 }

@@ -1,0 +1,22 @@
+UserRepository {
+    save(user)
+    linkUserWithPet(userId, petId)
+    linkUserWithPet(userId, pet)
+    getAllUsers()
+}
+
+User {
+    int id
+    String name
+    String phoneNumber
+    List<Pet> pets
+}
+
+tables: user(int id, String name, String phoneNumber), pets(int id, String name, String type, int age), user_pet_link(int user_id, int pet_id)
+
+int = integer
+String = varchar(1024)
+
+SELECT FROM
+INSERT INTO
+DELETE FROM
