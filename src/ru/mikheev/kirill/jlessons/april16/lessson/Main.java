@@ -18,11 +18,17 @@ public class Main {
         }
 
         try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_USER_PASSWORD)){
-            UsersDao usersDao = new UsersDao(connection);
-            var allUsers = usersDao.getAllUsers();
-            System.out.println(allUsers);
-//            usersDao.save(new User("Petr I", 30));
-//            System.out.println(usersDao.getAllUsers());
+            UserDao usersDao = new SimpleUsersDao(connection);
+            usersDao.GIGA_ADDER();
+//            usersDao.getUserById(1)
+//                    .ifPresent(
+//                            System.out::println
+//                    );
+//            usersDao.getUserById(3)
+//                    .ifPresentOrElse(
+//                            System.out::println,
+//                            () -> System.out.println("User with id 3 not found")
+//                    );
         } catch (SQLException e) {
             e.printStackTrace();
         }
